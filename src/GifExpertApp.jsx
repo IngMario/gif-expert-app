@@ -7,22 +7,15 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['One Punch']);
 
     return (
-        <>
-            <h2 className='titulo-900'>GifExpertApp</h2>
-            <AddCategory setCategories={ setCategories } />
-            <hr />
+      <>
+        <h1 className="title-app">Gif<span>Expert</span>App</h1>
+        <AddCategory setCategories={setCategories} />
 
-            <ol>
-                {
-                    categories.map( category  => (
-                        <GifGrid 
-                            key={ category }
-                            category={ category }
-                        />
-                    ))
-                }
-            </ol>
-
-        </>
-    )
+        <ol className='card-container'>
+          {categories.map((category) => (
+            <GifGrid key={category} category={category} />
+          ))}
+        </ol>
+      </>
+    );
 }

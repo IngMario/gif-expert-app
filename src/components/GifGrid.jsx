@@ -8,9 +8,12 @@ export const GifGrid = ({ category }) => {
 
     return (
       <>
-        <h3 className="tamano animate__animated animate__fadeIn animate__delay-1s">{" "}{category}{" "}</h3>
+        <h3 className="tamano animate__animated animate__fadeIn animate__delay-1s">
+          {" "}
+          {category}{" "}
+        </h3>
 
-        {loading && (<p className='carga-centro'>Loading...</p>)}
+        {loading && <p className="loading">Loading...</p>}
 
         <div className="card-grid">
           {images.map((img) => (

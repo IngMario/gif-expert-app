@@ -20,14 +20,15 @@ export const AddCategory = ({ setCategories }) => {
     }
 
     return (
-        <form onSubmit={ handleSubmit }>
-            <input 
-                type="text"
-                value={ inputValue }
-                onChange={ handleInputChange }
-            />
-        </form>
-    )
+      <form className='form' onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+          className="searchs"
+        />
+      </form>
+    );
 }
 
 
